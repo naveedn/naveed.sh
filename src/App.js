@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Terminal from 'terminal-in-react';
 import Emoji from 'a11y-react-emoji'
+import pseudoFileSystemPlugin from 'terminal-in-react-pseudo-file-system-plugin';
+
+
+const FileSystemPlugin = pseudoFileSystemPlugin();
 
 
 const Banner = () => (
@@ -38,6 +41,7 @@ class App extends Component {
           <Banner />
         </header>
         <Terminal
+          plugins={[FileSystemPlugin]}
           color='#41FF00'
           backgroundColor='black'
           barColor='black'
