@@ -1,8 +1,6 @@
 body {
-  /* background-color: #282c34; */
   background-color: black;
   color: #41FF00;
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New"; */
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -10,16 +8,51 @@ body {
   text-align: center;
 }
 
-.App-header {
+.banner {
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  /* color: white; */
+  font-size: 8.5px;
 }
 
-.App-link {
-  color: #61dafb;
+.sc-dnqmqq.dNrvp {
+  color: #41FF00;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+.sc-gzVnrw.khKDsa {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+.terminal {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+.sc-gzVnrwkhKDsa {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+.iQSzyY {
+  padding-top: 0px;
+  font-size: 1em;
+}
+
+.kotQqp, .kotQqp:focus {
+  font-size: 1em;
+}
+
+footer {
+  bottom: 5%;
+  margin:  auto;
+  width: 90%;
+  padding: 0 5%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+  font-size: .9em;
 }
