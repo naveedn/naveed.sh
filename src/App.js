@@ -24,34 +24,50 @@ const Footer = () => (
 
 const notImplemented = () => "This function is not yet implemented!"
 
+class IntroScreen extends Component {
+  render() {
+    console.log('YESSS')
+    return (
+      <React.Fragment>
+        <p>Welcome to Naveed's personal website!</p>
+        <p>What's your name?</p>
+        <p>Type some keys and then press enter:</p>
+      </React.Fragment>
+    )
+  }
+}
+
 class App extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      seenIntro: false
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <Banner />
-        <Terminal
+        {this.state.seenIntro ? <IntroScreen /> : <Terminal
           color='#41FF00'
           outputColor='#41FF00'
           backgroundColor='black'
           promptSymbol={'$'}
           hideTopBar={true}
           allowTabs={false}
-          style={{ maxHeight: '75%', fontFamily: ["Courier New", "Courier", "monospace"], fontWeight: 'bold', fontSize: ".9em"}}
+          style={{ maxHeight: '75%', fontFamily: ["Courier New", "Courier", "monospace"], fontWeight: 'bold', fontSize: ".9em" }}
           commands={{
             'cd': notImplemented,
             'ls': notImplemented,
-            'mkdir': notImplemented
+            'mkdir': notImplemented,
+            '*': () => "hello"
           }}
           descriptions={{
           }}
-          msg={`
-Welcome to Naveed's personal website!
-
-What's your name?
-
-Type some keys and then press enter:
-          `}
-        />
+          />
+        }
         <Footer />
       </div>
     );
